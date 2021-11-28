@@ -1,0 +1,16 @@
+@import 'base.css';
+
+div.teaser {
+  height:  20ex;
+  /*overflow: hidden;*/
+}
+td.teaser {
+  width:  30%;
+  text-align:  center;
+  padding-left: 2.5%;
+  direction: rtl;
+}
+td.metadata {
+  /*width: 50%;*/
+  vertical-align: top;
+}
