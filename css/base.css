@@ -1,3 +1,14 @@
+@font-face {
+  font-family:"Computer Modern Serif";
+  src: url("cmunrm.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Computer Modern Serif";
+  font-weight: bold;
+  src: url("cmunbx.ttf") format("truetype");
+}
+
 body {
   margin: 1em auto;
   padding: 2em;
