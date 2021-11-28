@@ -24,6 +24,9 @@ body {
   padding-top: 10px;
   text-align: center;
 }
+.tap_targets {
+  font-size: 1.2em;
+}
 .header {
   font-weight: bold;
   font-size: 1.2em;
