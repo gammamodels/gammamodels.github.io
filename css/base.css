@@ -6,8 +6,8 @@
 @font-face {
   font-family: 'Computer Modern Serif';
   font-weight: bold;
-  src: url('../gammamodels.github.io/css/cmunbx.ttf') format('truetype');
-  /*src: url('./cmunbx.ttf') format('truetype');*/
+  /*src: url('../gammamodels.github.io/css/cmunbx.ttf') format('truetype');*/
+  src: url('./cmunbx.ttf') format('truetype');
 }
 
 body {
