@@ -1,6 +1,6 @@
 @font-face {
-  font-family:"Computer Modern Serif";
-  src: url("cmunrm.ttf") format("truetype");
+  font-family:'Computer Modern Serif';
+  src: url('./cmunrm.ttf') format('truetype');
 }
 
 @font-face {
