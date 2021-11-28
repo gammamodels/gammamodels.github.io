@@ -3,7 +3,7 @@ function increment_img(id) {
     src = element.src
     length = src.length
 
-    ind_string = src.substring(length-6, length-4)
+    ind_string = src.substring(length-7, length-5)
     ind = parseInt(ind_string, 10)
 
     next_ind = (ind+1) % 10
