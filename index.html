@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="author" content="Michael Janner">
   <meta name="description" content="Gamma-models are predictive models with an infinite probabilistic horizon, trained using a generative adaptation of temporal difference learning.">
   <meta name="keywords" content="Michael Janner, gamma, models, gamma models, deep, successor, representation">
@@ -11,7 +11,7 @@
   <!-- <script src="js/main.js"></script> -->
   <title>Gamma-Models: Generative Temporal Difference Learning for Infinite-Horizon Prediction</title>
   <!-- mathjax -->
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
   <!-- google search console -->
   <!-- <meta name="google-site-verification" content="x5sEDA0ieF_mVCYDKxJ820Xi1O6n_XqI8UrNO97RvXw"/> -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -65,7 +65,7 @@
 <p>
   <span class="header">Summary</span>
   We train predictive models of environment dynamics with infinite probabilistic horizons using a generative adaptation of temporal difference learning.
-  The resulting \(\gamma\)-model is a continuous, generative analogue of the
+  The resulting <span class="mathjax" latex="\(\gamma\)-model">gamma-model</span> is a continuous, generative analogue of the
   <a href="http://www.gatsby.ucl.ac.uk/~dayan/papers/d93b.pdf">
     successor representation</a>
   and a hybrid between model-free and model-based mechanisms.
@@ -77,10 +77,12 @@
 </div>
 
 <p>
-  <span class="header">\(\gamma\)-Model rollouts</span>
-  Replacing single-step models with \(\gamma\)-models leads to generalizations of the procedures that form the foundation of model-based control.
+  <span class="header"><span class="mathjax" latex="\(\gamma\)-models">Gamma-model</span> rollouts</span>
+  Replacing single-step models with <span class="mathjax" latex="\(\gamma\)-models">gamma-models</span> leads to generalizations of the procedures that form the foundation of model-based control.
   Generalized rollouts have a negative binomial distribution over time per model step.
-  The first step has a geometric distribution from the special case of \(\text{NegBinom}(1,p)=\text{Geom}(1-p)\).
+  The first step has a geometric distribution from the special case of
+  <span class="mathjax" latex="\(\text{NegBinom}(1,p)=\text{Geom}(1-p)\)">
+    NegBinom(1, <i>p</i>) = Geom(1 &ndash; <i>p</i>)</span>.
 </p>
 
 <!-- <div class="image">
@@ -89,10 +91,11 @@
 
 <p>
   <span class="header">Value estimation</span>
-  Single-step models estimate values using long model-based rollouts, often between tens and hundreds of steps long. In contrast, values are expectations over a <b>single feedforward pass</b> of a \(\gamma\)-model: \(
+  Single-step models estimate values using long model-based rollouts, often between tens and hundreds of steps long. In contrast, values are expectations over a <b>single feedforward pass</b> of a gamma-model.
+<!--   : \(
     V(\mathbf{s}_t, \mathbf{a}_t) = 
     \mathbb{E}_{\mathbf{s}_e \sim \mu_\theta(\cdot \mid \mathbf{s}_t, \mathbf{a}_t)}[r(\mathbf{s}_e)]
-    \).
+    \). -->
 </p>
 
 <!-- <div class="image">
@@ -102,7 +105,7 @@
 </div>
  -->
 <div class="citation">
-  \(\gamma\)-Models: Generative Temporal Difference Learning for Infinite-Horizon Prediction
+  Generative Temporal Difference Learning for Infinite-Horizon Prediction
 </div>
    <div class="authors">
       <a href="https://jannerm.github.io/">Michael Janner</a>,
