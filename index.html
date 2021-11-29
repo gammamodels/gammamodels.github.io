@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/switch.css">
   <script src="js/main.js"></script>
   <title>Gamma-Models: Generative Temporal Difference Learning for Infinite-Horizon Prediction</title>
   <!-- mathjax -->
@@ -69,12 +70,30 @@
   If you cannot access YouTube, please <a href="https://people.eecs.berkeley.edu/~janner/gamma-models/images/gamma_models_neurips_2020_video.mp4">download our video here</a>.
 </p>
 
+<!-- <p style="padding-top: 0em; display:inline; border: 1px solid black;">
+Test
+</p>
+<p style="float: bottom; margin-bottom: .5em; display:inline; border: 1px solid black;">
+Test
+</p> -->
+
+<center>
+  <label class="switch" label="preview_checkbox">
+    <input id="latex_checkbox" type="checkbox" autocomplete="off">
+    <span class="slider round"></span>
+  </label>
+  <p class="latex_font" style="font-size: 1.0em; float: center; color: #969696; padding-top: .2em; display:inline;">
+    &nbsp;
+    <span class="mathjax" latex="\(\rm\LaTeX\)" raw="LaTeX">LaTeX</span>
+  </p>
+</center>
+
 </center>
 
 <p>
   <span class="header">Summary</span>
   We train predictive models of environment dynamics with infinite probabilistic horizons using a generative adaptation of temporal difference learning.
-  The resulting <span class="mathjax" latex="\(\gamma\)-model">gamma-model</span> is a continuous, generative analogue of the
+  The resulting <span class="mathjax" latex="\(\gamma\)-model" raw="gamma-model">gamma-model</span> is a continuous, generative analogue of the
   <a href="http://www.gatsby.ucl.ac.uk/~dayan/papers/d93b.pdf">
     successor representation</a>
   and a hybrid between model-free and model-based mechanisms.
@@ -86,11 +105,11 @@
 </div>
 
 <p>
-  <span class="header"><span class="mathjax" latex="\(\gamma\)-models">Gamma-model</span> rollouts</span>
-  Replacing single-step models with <span class="mathjax" latex="\(\gamma\)-models">gamma-models</span> leads to generalizations of the procedures that form the foundation of model-based control.
+  <span class="header"><span class="mathjax" latex="\(\gamma\)-model" raw="Gamma-model">Gamma-model</span> rollouts</span>
+  Replacing single-step models with <span class="mathjax" latex="\(\gamma\)-models" raw="gamma-models">gamma-models</span> leads to generalizations of the procedures that form the foundation of model-based control.
   Generalized rollouts have a negative binomial distribution over time per model step.
   The first step has a geometric distribution from the special case of
-  <span class="mathjax" latex="\(\text{NegBinom}(1,p)=\text{Geom}(1-p)\)">
+  <span class="mathjax" latex="\(\text{NegBinom}(1,p)=\text{Geom}(1-p)\)" raw="NegBinom(1, <i>p</i>) = Geom(1 &ndash; <i>p</i>)">
     NegBinom(1, <i>p</i>) = Geom(1 &ndash; <i>p</i>)</span>.
 </p>
 
@@ -100,10 +119,10 @@
 
 <p>
   <span class="header">Value estimation</span>
-  Single-step models estimate values using long model-based rollouts, often between tens and hundreds of steps long. In contrast, values are expectations over a <b>single feedforward pass</b> of a gamma-model<span class="mathjax" latex=": \(
+  Single-step models estimate values using long model-based rollouts, often between tens and hundreds of steps long. In contrast, values are expectations over a <b>single feedforward pass</b> of a <span class="mathjax" latex="\(\gamma\)-model" raw="gamma-model">gamma-model</span><span class="mathjax" latex=": \(
     V(\mathbf{s}_t, \mathbf{a}_t) = 
     \mathbb{E}_{\mathbf{s}_e \sim \mu_\theta(\cdot \mid \mathbf{s}_t, \mathbf{a}_t)}[r(\mathbf{s}_e)]
-    \).">.</span>
+    \)." raw=".">.</span>
 
 </p>
 
@@ -129,6 +148,8 @@
   <a href="https://bair.berkeley.edu/blog/2021/01/05/successor/">Blog</a>&nbsp;
   <a href="https://raw.githubusercontent.com/gammamodels/gammamodels.github.io/master/files/bib.tex">Bibtex</a>
 </span>
+
+<script src="js/switch.js"></script>
 
 </body>
 </html>
